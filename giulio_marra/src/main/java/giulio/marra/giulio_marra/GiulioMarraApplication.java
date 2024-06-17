@@ -13,8 +13,8 @@ public class GiulioMarraApplication {
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(GiulioMarraApplication.class);
 
-        Menu f1 = ctx.getBean(Menu.class);
-        f1.stampaMenu();
+        Menu menu = ctx.getBean(Menu.class);
+        menu.stampaMenu();
     }
 
 }

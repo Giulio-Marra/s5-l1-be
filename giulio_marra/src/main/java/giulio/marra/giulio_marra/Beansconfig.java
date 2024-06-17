@@ -80,9 +80,33 @@ public class Beansconfig {
         return new Bevande(2.00, "sprite");
     }
 
+    public List<Pizze> tutteLePizze() {
+        List<Pizze> pizze = new ArrayList<>();
+        pizze.add(margherita());
+        pizze.add(funghiPizza());
+        pizze.add(prosciuttoPizza());
+        return pizze;
+    }
+
+    public List<Bevande> tutteLeBevande() {
+        List<Bevande> bevande = new ArrayList<>();
+        bevande.add(sprite());
+        bevande.add(acqua());
+        bevande.add(coca());
+        return bevande;
+    }
+
+    public List<Ingredienti> tuttiGliIngredienti() {
+        List<Ingredienti> ingredienti = new ArrayList<>();
+        ingredienti.add(funghi());
+        ingredienti.add(prosciutto());
+        ingredienti.add(ananas());
+        return ingredienti;
+    }
+
     @Bean
-    public Menu menu(List<Pizze> pizze, List<Bevande> bevande, List<Ingredienti> ingredienti) {
-        return new Menu(pizze, bevande, ingredienti);
+    public Menu menu(List<Pizze> tutteLePizze, List<Bevande> tutteLeBevande, List<Ingredienti> tuttiGliIngredienti) {
+        return new Menu(tutteLePizze, tutteLeBevande, tuttiGliIngredienti);
     }
 
 
